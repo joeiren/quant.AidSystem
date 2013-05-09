@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51650E20-5F61-4266-951B-8CAD3AE24658}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestService</RootNamespace>
+    <AssemblyName>TestService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/TestService/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xQuant.Log4, Version=2.1.0.1, Culture=neutral, PublicKeyToken=d8819f69dca22bef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Output\xQuant.Log4.dll</HintPath>
+    </Reference>
+    <Reference Include="xQuant.MQ, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRecordForm.Designer.cs">
+      <DependentUpon>AccountRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="CoreAcctCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoreAcctCheckForm.Designer.cs">
+      <DependentUpon>CoreAcctCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FundRetrieveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FundRetrieveForm.Designer.cs">
+      <DependentUpon>FundRetrieveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoderTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoderTool.Designer.cs">
+      <DependentUpon>CoderTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InnerAcctForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InnerAcctForm.Designer.cs">
+      <DependentUpon>InnerAcctForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterBankAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterBankAccount.Designer.cs">
+      <DependentUpon>InterBankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterBankDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterBankDelete.Designer.cs">
+      <DependentUpon>InterBankDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterBankRedepoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterBankRedepoForm.Designer.cs">
+      <DependentUpon>InterBankRedepoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterBankRetrieveBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterBankRetrieveBalance.Designer.cs">
+      <DependentUpon>InterBankRetrieveBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterBankSettleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterBankSettleForm.Designer.cs">
+      <DependentUpon>InterBankSettleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Multi2OneAcctRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multi2OneAcctRecord.Designer.cs">
+      <DependentUpon>Multi2OneAcctRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentCheckAcctForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentCheckAcctForm.Designer.cs">
+      <DependentUpon>PaymentCheckAcctForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentTestForm.Designer.cs">
+      <DependentUpon>PaymentTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryNoticeForm.Designer.cs">
+      <DependentUpon>QueryNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerializationObj.cs" />
+    <Compile Include="TestServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestServiceForm.Designer.cs">
+      <DependentUpon>TestServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountRecordForm.resx">
+      <DependentUpon>AccountRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoreAcctCheckForm.resx">
+      <DependentUpon>CoreAcctCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FundRetrieveForm.resx">
+      <DependentUpon>FundRetrieveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoderTool.resx">
+      <DependentUpon>CoderTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InnerAcctForm.resx">
+      <DependentUpon>InnerAcctForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterBankAccount.resx">
+      <DependentUpon>InterBankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterBankDelete.resx">
+      <DependentUpon>InterBankDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterBankRedepoForm.resx">
+      <DependentUpon>InterBankRedepoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterBankRetrieveBalance.resx">
+      <DependentUpon>InterBankRetrieveBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterBankSettleForm.resx">
+      <DependentUpon>InterBankSettleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multi2OneAcctRecord.resx">
+      <DependentUpon>Multi2OneAcctRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentCheckAcctForm.resx">
+      <DependentUpon>PaymentCheckAcctForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentTestForm.resx">
+      <DependentUpon>PaymentTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryNoticeForm.resx">
+      <DependentUpon>QueryNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestServiceForm.resx">
+      <DependentUpon>TestServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\AidWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xQuant.AidSystem.BizDataModel\xQuant.AidSystem.BizDataModel.csproj">
+      <Project>{AF31AE44-F7C4-46AC-B4F9-81075F689C23}</Project>
+      <Name>xQuant.AidSystem.BizDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.ClientSyncWrapper\xQuant.AidSystem.ClientSyncWrapper.csproj">
+      <Project>{D8687F40-CDF9-497B-BED9-196EF1AA1AE8}</Project>
+      <Name>xQuant.AidSystem.ClientSyncWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.CoreMessageData\xQuant.AidSystem.CoreMessageData.csproj">
+      <Project>{FCCFD480-C17E-4981-A83F-7E957ED00DEE}</Project>
+      <Name>xQuant.AidSystem.CoreMessageData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.DBAction\xQuant.AidSystem.DBAction.csproj">
+      <Project>{6E94C1F7-F583-4A4B-90C2-20615F85A7C2}</Project>
+      <Name>xQuant.AidSystem.DBAction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem\xQuant.AidSystem.csproj">
+      <Project>{D0F8F9E9-4E4A-4AAF-95E0-7802DE5EC6DC}</Project>
+      <Name>xQuant.AidSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/AidWebService/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AidWebService\</RelPath>
+      <UpdateFromURL>http://localhost/AidWebService/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TestService_AidWebService_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\AidWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AidWebService\SerializationObj.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AidWebService\Service.disco" />
+    <None Include="Web References\AidWebService\Service.wsdl" />
+    <None Include="Web References\AidWebService\ServiceResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8687F40-CDF9-497B-BED9-196EF1AA1AE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xQuant.AidSystem.ClientSyncWrapper</RootNamespace>
+    <AssemblyName>xQuant.AidSystem.ClientSyncWrapper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.ClientSyncWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.ClientSyncWrapper.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xIR.Framework.Transactions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="xQuant.BizCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="xQuant.Log4, Version=2.1.0.1, Culture=neutral, PublicKeyToken=d8819f69dca22bef, processorArchitecture=MSIL" />
+    <Reference Include="xQuant.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="xQuant.MQ, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AidSysClientSyncWrapper.cs" />
+    <Compile Include="AsyncSemaphoreManager.cs" />
+    <Compile Include="ClientSyncHelper.cs" />
+    <Compile Include="ClientUtility.cs" />
+    <Compile Include="MQExternalHandler.cs" />
+    <Compile Include="MQMsgCommonHelper.cs" />
+    <Compile Include="MQMsgHandlerEntry.cs" />
+    <Compile Include="MsgHandlerEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TupleResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xQuant.AidSystem.BizDataModel\xQuant.AidSystem.BizDataModel.csproj">
+      <Project>{AF31AE44-F7C4-46AC-B4F9-81075F689C23}</Project>
+      <Name>xQuant.AidSystem.BizDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.CoreMessageData\xQuant.AidSystem.CoreMessageData.csproj">
+      <Project>{FCCFD480-C17E-4981-A83F-7E957ED00DEE}</Project>
+      <Name>xQuant.AidSystem.CoreMessageData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.DBAction\xQuant.AidSystem.DBAction.csproj">
+      <Project>{6E94C1F7-F583-4A4B-90C2-20615F85A7C2}</Project>
+      <Name>xQuant.AidSystem.DBAction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem\xQuant.AidSystem.csproj">
+      <Project>{D0F8F9E9-4E4A-4AAF-95E0-7802DE5EC6DC}</Project>
+      <Name>xQuant.AidSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

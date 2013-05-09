@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCCFD480-C17E-4981-A83F-7E957ED00DEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xQuant.AidSystem.CoreMessageData</RootNamespace>
+    <AssemblyName>xQuant.AidSystem.CoreMessageData</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.CoreMessageData.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.CoreMessageData.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xQuant.Log4, Version=2.1.0.1, Culture=neutral, PublicKeyToken=d8819f69dca22bef, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\AcctCheckData.cs" />
+    <Compile Include="Core\AcctCheckOBDATA.cs" />
+    <Compile Include="Core\AcctCheckODATA.cs" />
+    <Compile Include="Core\AcctCheckRQDTL.cs" />
+    <Compile Include="Core\AcctEraseData.cs" />
+    <Compile Include="Core\AcctEraseODATA.cs" />
+    <Compile Include="Core\AcctRecordData.cs" />
+    <Compile Include="Core\AcctRecordMulti2OneData.cs" />
+    <Compile Include="Core\AcctRecordMulti2OneODATA.cs" />
+    <Compile Include="Core\AcctRecordMulti2OneRQDTL.cs" />
+    <Compile Include="Core\AcctRecordODATA.cs" />
+    <Compile Include="Core\AcctRecordRQDTL.cs" />
+    <Compile Include="Core\AcctRetrieveData.cs" />
+    <Compile Include="Core\AcctRetrieveODATA.cs" />
+    <Compile Include="Core\AcctRetrieveRQDTL.cs" />
+    <Compile Include="Core\AddCstmData.cs" />
+    <Compile Include="Core\AddCstmODATA.cs" />
+    <Compile Include="Core\AddCstmRQDTL.cs" />
+    <Compile Include="BizArgumentsException.cs" />
+    <Compile Include="Core\InterBankAcctInfoData.cs" />
+    <Compile Include="Core\InterBankAcctInfoODATA.cs" />
+    <Compile Include="Core\InterBankAcctInfoRQDTL.cs" />
+    <Compile Include="Core\InterBankAutoRedepoData.cs" />
+    <Compile Include="Core\InterBankAutoRedepoRQDTL.cs" />
+    <Compile Include="Core\InterBankDeleteAcctData.cs" />
+    <Compile Include="Core\InterBankDeleteAcctRQDTL.cs" />
+    <Compile Include="Core\InterBankInterestData.cs" />
+    <Compile Include="Core\InterBankPreparedData.cs" />
+    <Compile Include="Core\InterBankNoticeLetterData.cs" />
+    <Compile Include="Core\InterBankNoticeLetterODATA.cs" />
+    <Compile Include="Core\InterBankNoticeLetterRQDTL.cs" />
+    <Compile Include="Core\InterBankOpenAcctData.cs" />
+    <Compile Include="Core\InterBankOpenAcctRQDTL.cs" />
+    <Compile Include="Core\TellerChangePwdData.cs" />
+    <Compile Include="Core\TellerChangePwdRQDTL.cs" />
+    <Compile Include="MsgHandler\BizMsgDataBase.cs" />
+    <Compile Include="Core\DepositClearingFundData.cs" />
+    <Compile Include="Core\DepositClearingFundODATA.cs" />
+    <Compile Include="Core\DepositClearingFundRQDTL.cs" />
+    <Compile Include="Core\FingerMarkData.cs" />
+    <Compile Include="Core\FingerMarkReq.cs" />
+    <Compile Include="Core\FingerMarkResp.cs" />
+    <Compile Include="MsgHandler\CoreBizMsgMultiReqDataBase.cs" />
+    <Compile Include="MsgHandler\CoreMessageHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MsgHandler\IBDATA_MsgHandler.cs" />
+    <Compile Include="MsgTransfer.cs" />
+    <Compile Include="MsgTransferUtility.cs" />
+    <Compile Include="Payment\PayIncomeAcctEraseData.cs" />
+    <Compile Include="Payment\PayIncomeAcctEraseRP.cs" />
+    <Compile Include="Payment\PayIncomeAcctEraseRQ.cs" />
+    <Compile Include="Core\RetrieveAcctCrntBalanceData.cs" />
+    <Compile Include="Core\RetrieveAcctCrntBalanceODATA.cs" />
+    <Compile Include="Core\RetrieveAcctCrntBalanceRQDTL.cs" />
+    <Compile Include="Core\SuperiorCurrentAcctData.cs" />
+    <Compile Include="Core\SuperiorCurrentAcctODATA.cs" />
+    <Compile Include="Core\SuperiorCurrentAcctRQDTL.cs" />
+    <Compile Include="MsgHandler\CoreBizMsgDataBase.cs" />
+    <Compile Include="CommonDataHelper.cs" />
+    <Compile Include="MsgHandler\CoreBizMsgMultiRespDataBase.cs" />
+    <Compile Include="MsgHandler\CoreDataBlockHeader.cs" />
+    <Compile Include="EBCDICEncoder.cs" />
+    <Compile Include="Core\EncryptHandler.cs" />
+    <Compile Include="Core\EncryptPin.cs" />
+    <Compile Include="Core\EncryptTellerAuth.cs" />
+    <Compile Include="Core\InterAcctRetrieveData.cs" />
+    <Compile Include="Core\InterAcctRetrieveODATA.cs" />
+    <Compile Include="Core\InterAcctRetrieveRQDTL.cs" />
+    <Compile Include="Payment\PayAcctCheckData.cs" />
+    <Compile Include="Payment\PayAcctCheckRP.cs" />
+    <Compile Include="Payment\PayAcctCheckRQ.cs" />
+    <Compile Include="Payment\PayBankInfoData.cs" />
+    <Compile Include="Payment\PayBankInfoRP.cs" />
+    <Compile Include="Payment\PayBankInfoRQ.cs" />
+    <Compile Include="Payment\PayFundTransferData.cs" />
+    <Compile Include="Payment\PayFundTransferRP.cs" />
+    <Compile Include="Payment\PayFundTransferRQ.cs" />
+    <Compile Include="MsgHandler\IMessageHandler.cs" />
+    <Compile Include="MsgHandler\OMSG_MsgHandler.cs" />
+    <Compile Include="Payment\PayOutcomeAcctEraseData.cs" />
+    <Compile Include="Payment\PayOutcomeAcctEraseRP.cs" />
+    <Compile Include="Payment\PayOutcomeAcctEraseRQ.cs" />
+    <Compile Include="Payment\PayInterBankData.cs" />
+    <Compile Include="Payment\PayInterBankRP.cs" />
+    <Compile Include="Payment\PayInterBankRQ.cs" />
+    <Compile Include="MsgHandler\PaymentBizMsgDataBase.cs" />
+    <Compile Include="Payment\PayRegisterRetrievedData.cs" />
+    <Compile Include="Payment\PayRegisterRetrievedRP.cs" />
+    <Compile Include="Payment\PayRegisterRetrievedRQ.cs" />
+    <Compile Include="Payment\PayVostroAcctEliminateData.cs" />
+    <Compile Include="Payment\PayVostroAcctEliminateRP .cs" />
+    <Compile Include="Payment\PayVostroAcctEliminateRQ.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\RetrieveCstmBaseInfoData.cs" />
+    <Compile Include="Core\RetrieveCstmBaseInfoRQDTL.cs" />
+    <Compile Include="Core\RetrieveCstmBaseInfoODATA.cs" />
+    <Compile Include="Core\RetrieveCstmODATA.cs" />
+    <Compile Include="Core\RetrieveCstmData.cs" />
+    <Compile Include="MsgHandler\RPHDR_MsgHandler.cs" />
+    <Compile Include="Core\RetrieveCstmRQDTL.cs" />
+    <Compile Include="MsgHandler\RQHDR_MsgHandler.cs" />
+    <Compile Include="MsgHandler\SYSERR_MsgHandler.cs" />
+    <Compile Include="Core\TellerAuthData.cs" />
+    <Compile Include="Core\TellerAuthODATA.cs" />
+    <Compile Include="Core\TellerAuthRQDTL.cs" />
+    <Compile Include="Core\UpdateCstmData.cs" />
+    <Compile Include="Core\UpdateCstmODATA.cs" />
+    <Compile Include="Core\UpdateCstmRQDTL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xQuant.AidSystem.BizDataModel\xQuant.AidSystem.BizDataModel.csproj">
+      <Project>{AF31AE44-F7C4-46AC-B4F9-81075F689C23}</Project>
+      <Name>xQuant.AidSystem.BizDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xQuant.AidSystem.DBAction\xQuant.AidSystem.DBAction.csproj">
+      <Project>{6E94C1F7-F583-4A4B-90C2-20615F85A7C2}</Project>
+      <Name>xQuant.AidSystem.DBAction</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

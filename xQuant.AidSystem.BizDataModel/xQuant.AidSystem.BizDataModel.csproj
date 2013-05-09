@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF31AE44-F7C4-46AC-B4F9-81075F689C23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xQuant.AidSystem.BizDataModel</RootNamespace>
+    <AssemblyName>xQuant.AidSystem.BizDataModel</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>Full</TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.BizDataModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\xQuant.AidSystem.BizDataModel.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AidTypeDefine.cs" />
+    <Compile Include="BizDataHelper.cs" />
+    <Compile Include="CoreAcctCrntBalance.cs" />
+    <Compile Include="CoreAcctDetail.cs" />
+    <Compile Include="CoreAcctEntry.cs" />
+    <Compile Include="CoreAcctErase.cs" />
+    <Compile Include="CoreBillRecord.cs" />
+    <Compile Include="CoreBillRetrieve.cs" />
+    <Compile Include="CoreCheckAcctInfo.cs" />
+    <Compile Include="InterBankDeleteAcctInfo.cs" />
+    <Compile Include="InterBankOpenAcctInfo.cs" />
+    <Compile Include="FundCrntAcctBalance.cs" />
+    <Compile Include="CoreCustomBaseInfo.cs" />
+    <Compile Include="CoreCustomerBrief.cs" />
+    <Compile Include="CoreCustomer.cs" />
+    <Compile Include="FundSuperiorCurrentAcct.cs" />
+    <Compile Include="FundInternalAcct.cs" />
+    <Compile Include="InterBankInterestInfo.cs" />
+    <Compile Include="InterBankPreparedInfo.cs" />
+    <Compile Include="InternalAcctCondtion.cs" />
+    <Compile Include="InterBankNoticeLetterInfo.cs" />
+    <Compile Include="PayBanksInfo.cs" />
+    <Compile Include="PayCheckAcct.cs" />
+    <Compile Include="PayFundTransfer.cs" />
+    <Compile Include="PayInterBank.cs" />
+    <Compile Include="PaymentResult.cs" />
+    <Compile Include="PayVostroAcctEliminate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
